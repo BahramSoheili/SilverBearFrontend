@@ -1,0 +1,87 @@
+<div *ngIf="(computerDetails$ | async) as computerDetails">
+    <mat-card class="details" fxLayout="column" fxLayoutAlign = "center center">  
+        <mat-card-title style="font-size: 20px; font-weight: bold;">
+            <span fxFlex fxLayout fxLayoutAlign = "center">
+                ID: 
+                <span style="font-weight: bold; color: black">
+                  &nbsp; {{computerDetails.Data.appId}}
+                </span> 
+              </span>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <p></p>
+          <mat-card-title style="font-size: 20px">
+            <span fxFlex fxLayout fxLayoutAlign = "center">
+              RAM: 
+              <span style="font-weight: bold; color: black">
+                &nbsp; {{computerDetails.Data.ram}}
+              </span> 
+            </span>
+          </mat-card-title>
+          <mat-card-title style="font-size: 20px">
+            <span fxFlex fxLayout fxLayoutAlign = "center">
+              HDD:
+              <span style="font-weight: bold; color: black">
+                &nbsp; {{computerDetails.Data.hdd}}
+              </span>
+            </span>
+          </mat-card-title>         
+          <p>
+            <span fxFlex fxLayout fxLayoutAlign = "center">
+              PORTS:
+              <span style="font-weight: bold;">
+                &nbsp; {{computerDetails.Data.ports }}
+              </span>
+            </span> 
+          </p> 
+          <p>
+            <span fxFlex fxLayout fxLayoutAlign = "center">
+              DISPLAY:
+              <span style="font-weight: bold;">              
+                &nbsp; {{computerDetails.Data.display}}
+              </span> 
+            </span> 
+          </p> 
+          <p>
+            <span fxFlex fxLayout fxLayoutAlign = "center">
+              WEIGHT:
+              <span style="font-weight: bold;">
+                &nbsp; {{computerDetails.Data.weight}}
+              </span> 
+            </span> 
+          </p> 
+          <p>
+            <span fxFlex fxLayout fxLayoutAlign = "center">
+              POWER:
+              <span style="font-weight: bold;">
+                &nbsp; {{computerDetails.Data.power}}
+              </span> 
+            </span> 
+          </p> 
+          <p>
+            <span fxFlex fxLayout fxLayoutAlign = "center">
+              CPU:
+              <span style="font-weight: bold;">
+                &nbsp; {{computerDetails.Data.cpu}}
+              </span> 
+            </span> 
+          </p> 
+        </mat-card-subtitle>  
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              History>
+            </mat-panel-title>          
+          </mat-expansion-panel-header>        
+          <p>Created: <span fxFlex fxLayout fxLayoutAlign = "flex-end">
+            {{computerDetails.created}}</span> </p>
+          <p>LastModified: <span fxFlex fxLayout fxLayoutAlign = "flex-end">
+            {{computerDetails.lastUpdatedTimeStamp}}</span> </p>  
+        </mat-expansion-panel>
+        <mat-card-actions>
+          <button mat-raised-button (click)= "editComputer()">Edit</button>  
+          <button mat-raised-button (Click) = "deleteComputer()">Delete</button>
+        </mat-card-actions>
+    </mat-card>
+  </div>
+  

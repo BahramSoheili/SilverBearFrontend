@@ -1,0 +1,13 @@
+<mat-tab-group fxLayout ="column" fxLayoutAlign="center center" 
+[selectedIndex]="selected.value">
+  <mat-tab label="List">
+        <app-computer-list></app-computer-list>
+    </mat-tab>
+    <mat-tab label="Create">
+      <app-computer-create></app-computer-create>
+    </mat-tab>
+    <mat-tab label="Edit" *ngIf = "IsComputerEdit">
+      <app-computer-update [computer] = editComputer ></app-computer-update>
+    </mat-tab>
+</mat-tab-group>
+

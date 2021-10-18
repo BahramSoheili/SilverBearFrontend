@@ -1,0 +1,9 @@
+<ag-grid-angular 
+    #agGrid
+    class="ag-theme-balham"
+    [columnDefs]="columnDefs"
+    [rowSelection]="rowSelection"
+    (selectionChanged)="onSelectionChanged()"
+    (gridReady)="onGridReady($event)"
+    [pagination]=true>
+</ag-grid-angular>

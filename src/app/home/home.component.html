@@ -1,0 +1,15 @@
+<body>
+    <header>
+              <app-header></app-header>
+    </header>
+    <aside>
+              <app-sidenav-list></app-sidenav-list>
+    </aside>
+    <main>
+        <router-outlet name = "mainOutlet"> </router-outlet>
+    </main>
+    <div class = right>
+       <app-computer-details *ngIf="showComputerDetails" fxLayout="column" fxLayoutAlign="center center"></app-computer-details>    
+    </div>      
+  </body>
+    

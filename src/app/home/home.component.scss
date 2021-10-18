@@ -1,0 +1,25 @@
+body {
+    margin:0;
+    display: grid;
+    grid-template-columns: 10% auto 30%;
+    grid-template-rows: 60px auto;
+    grid-template-areas: "hd hd hd"
+                         "sidebar main right";
+  }
+  header {
+    grid-area: hd;
+  }
+  aside {
+    grid-area: sidebar;
+  }
+  main {
+    grid-area: main;
+    background-color: gray;
+  }
+  .right {
+    grid-area: right;
+    background-color: gray;
+  }
+  footer {
+    grid-area: footer;
+  }

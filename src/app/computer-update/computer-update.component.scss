@@ -1,0 +1,86 @@
+.description {
+    margin: 10px;
+    width: 300px;
+  }
+  
+  form {
+    background-color: white;
+    height: 780px;
+    margin: 10px;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 20% auto auto ;
+    grid-template-areas: "main pic"
+                         "bail bail"               
+                         "footer footer";
+  }  
+  main {
+    grid-area: main;
+  }
+  aside {
+    grid-area: pic;
+    margin: 10px;
+  
+  }
+  content {
+    grid-area: bail;
+    margin-left: 10px;
+  }
+  footer {
+    grid-area: footer;
+  }
+  .days {    
+    margin: 35px 0;    
+  }
+  .error {
+    color: red;
+  }
+  .mat-button{
+    height:48px !important;
+    width:130px !important;
+    font-size:40px !important;
+  }
+  .title{
+    font-weight: bold; 
+    font-size: large;
+    background-color: black;
+    color: white;
+    width: 790px;
+    height: 50px;
+  }
+  .subTitle{
+    font-weight: bold; 
+    font-size: medium;
+    color:black;
+    margin-left: 200px;
+  }
+  .mobileLocation{
+    background-color: lightgray;
+    //width: 200px;
+  }
+  .address {
+    width: 120px;
+  }
+  
+  .is-invalid {
+    padding-right: 36px;
+    background-image: url("/assets/icons8-cancel-50.png");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    width: 115px;
+  }
+  .is-valid {
+    padding-right: 60px;
+    background-image: url("/assets/success-svgrepo-com.svg");
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+    width: 115px;
+  }
+  .is-loading {
+    padding-right: 36px;
+    background-image: url("/assets/icons8-spinning-circle.gif");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    width: 115px;
+  }

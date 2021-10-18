@@ -1,0 +1,99 @@
+<form #f="ngForm" [formGroup]="form" (ngSubmit)="onSubmit(f)">
+        <section  class="sectionArea">
+            <mat-form-field>
+                <input type="text" matInput placeholder="Ram" 
+                maxlength="15" formControlName="ram" required>
+                <mat-error *ngIf="ram.hasError('required')">
+                    RAM required between 3 to 15 characters
+                </mat-error>
+                <mat-error *ngIf = "ram.hasError('minlength')
+                      && !ram.hasError('required')">
+                    Must be more than 3 characters
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input type="text" matInput placeholder="HDD" 
+                maxlength="15" formControlName="hdd" required>
+                <mat-error *ngIf = "hdd.hasError('required')">
+                    HDD required between 3 to 15 characters
+                </mat-error>
+                <mat-error *ngIf="hdd.hasError('minlength') 
+                && !hdd.hasError('required')">
+                    Must be more than 3 characters
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input type="text" matInput placeholder="PORTS" 
+                maxlength="15" formControlName="ports" required>
+                <mat-error *ngIf = "ports.hasError('required')">
+                    ports required between 3 to 15 characters
+                </mat-error>
+                <mat-error *ngIf="ports.hasError('minlength') 
+                && !ports.hasError('required')">
+                    Must be more than 3 characters
+                </mat-error>
+            </mat-form-field>
+        </section>  
+        <section  class="sectionArea">
+            <mat-form-field>
+                <input type="text" matInput placeholder="Display" 
+                maxlength="15" formControlName="display" required>
+                <mat-error *ngIf="display.hasError('required')">
+                    Display required between 3 to 15 characters
+                </mat-error>
+                <mat-error *ngIf = "display.hasError('minlength')
+                      && !display.hasError('required')">
+                    Must be more than 3 characters
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input type="text" matInput placeholder="Weight" 
+                maxlength="15" formControlName="weight" required>
+                <mat-error *ngIf = "hdd.hasError('required')">
+                    Weight required between 3 to 15 characters
+                </mat-error>
+                <mat-error *ngIf="weight.hasError('minlength') 
+                && !weight.hasError('required')">
+                    Must be more than 3 characters
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input type="text" matInput placeholder="Power" 
+                maxlength="15" formControlName="power" required>
+                <mat-error *ngIf = "power.hasError('required')">
+                    Power required between 3 to 15 characters
+                </mat-error>
+                <mat-error *ngIf="power.hasError('minlength') 
+                && !power.hasError('required')">
+                    Must be more than 3 characters
+                </mat-error>
+            </mat-form-field>
+        </section>  
+        <section  class="sectionArea">
+            <mat-form-field>
+                <input type="text" matInput placeholder="CPU" 
+                maxlength="15" formControlName="cpu" required>
+                <mat-error *ngIf="display.hasError('required')">
+                    CPU required between 3 to 15 characters
+                </mat-error>
+                <mat-error *ngIf = "cpu.hasError('minlength')
+                      && !cpu.hasError('required')">
+                    Must be more than 3 characters
+                </mat-error>
+            </mat-form-field>                   
+        </section>     
+        <section>
+            <mat-form-field class="description">
+                <input type="text" matInput placeholder="Description" 
+                maxlength="256" formControlName="description">
+                <mat-error *ngIf="description.hasError('maxlength')">
+                    Must be more than 3 characters
+                </mat-error>
+            </mat-form-field>         
+        </section>   
+        <br> 
+        <button type="submit" class="mat-button" mat-raised-button width="100" color="primary"
+            [disabled]="form.invalid">
+            Save
+        </button>
+</form>
